@@ -1,18 +1,24 @@
 #include <stdio.h>
 
+/*
+ *******
+  *****
+   ***
+    *
+*/
 int main() {
-    int a;
-    scanf("%d",&a);
-    int star = a;
-    for(int i = 1; i<=a; i++){
-        for(int j = i-1; j>=1; j--){
+    int rows;
+    scanf("%d", &rows);
+
+    for (int i = rows; i >= 1; i--) {
+        for (int j = 0; j < rows - i; j++) {
             printf(" ");
         }
-        for(int j = star; j>=1; j--){
+        for (int k = 0; k < (2 * i - 1); k++) {
             printf("*");
         }
-        star-=2;
         printf("\n");
     }
+    
     return 0;
 }
